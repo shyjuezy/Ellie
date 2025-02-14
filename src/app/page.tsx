@@ -1,101 +1,206 @@
 import Image from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="container mx-auto px-4">
+      <section
+        id="hero"
+        className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      >
+        <div className="absolute inset-0 z-0">
+          <svg
+            className="w-full h-full"
+            viewBox="0 0 1000 1000"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <defs>
+              <linearGradient id="a" gradientTransform="rotate(45)">
+                <stop offset="0%" stopColor="hsl(var(--primary))" />
+                <stop offset="100%" stopColor="hsl(var(--secondary))" />
+              </linearGradient>
+              <linearGradient id="b" gradientTransform="rotate(135)">
+                <stop offset="0%" stopColor="hsl(var(--primary))" />
+                <stop offset="100%" stopColor="hsl(var(--secondary))" />
+              </linearGradient>
+            </defs>
+            <path fill="url(#a)" d="M0 0h1000v1000H0z" />
+            <g fill="url(#b)" opacity=".5">
+              <circle cx="500" cy="100" r="300" />
+              <circle cx="900" cy="600" r="200" />
+              <circle cx="100" cy="800" r="250" />
+            </g>
+          </svg>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div className="text-center relative z-10">
+          <h1 className="text-6xl font-bold text-primary-foreground mb-4 animate-fade-in-up">
+            Jane Doe
+          </h1>
+          <p className="text-3xl text-secondary-foreground animate-fade-in-up animation-delay-300">
+            Visual Artist & Illustrator
+          </p>
+        </div>
+      </section>
+
+      <section id="about" className="py-20">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-primary mb-8">About Me</h2>
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            I&apos;m a passionate visual artist with over 10 years of experience
+            in illustration and digital art. My work focuses on blending
+            traditional techniques with modern digital tools to create unique
+            and captivating pieces that push the boundaries of contemporary art.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="education"
+        className="py-20 bg-secondary relative overflow-hidden"
+      >
+        <svg
+          className="absolute top-0 left-0 w-full h-32 text-background"
+          preserveAspectRatio="none"
+          viewBox="0 0 1440 320"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <path
+            fill="currentColor"
+            fillOpacity="1"
+            d="M0,32L60,58.7C120,85,240,139,360,138.7C480,139,600,85,720,74.7C840,64,960,96,1080,122.7C1200,149,1320,171,1380,181.3L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+          ></path>
+        </svg>
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-4xl font-bold text-primary mb-12 text-center">
+            Education
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="transform transition-all duration-300 hover:scale-105">
+              <CardHeader>
+                <CardTitle className="text-2xl font-semibold text-primary">
+                  Master of Fine Arts
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  University of Arts, 2018-2020
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="transform transition-all duration-300 hover:scale-105">
+              <CardHeader>
+                <CardTitle className="text-2xl font-semibold text-primary">
+                  Bachelor of Visual Arts
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  State College of Design, 2014-2018
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+        <svg
+          className="absolute bottom-0 left-0 w-full h-32 text-background transform rotate-180"
+          preserveAspectRatio="none"
+          viewBox="0 0 1440 320"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <path
+            fill="currentColor"
+            fillOpacity="1"
+            d="M0,32L60,58.7C120,85,240,139,360,138.7C480,139,600,85,720,74.7C840,64,960,96,1080,122.7C1200,149,1320,171,1380,181.3L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+          ></path>
+        </svg>
+      </section>
+
+      <section id="experience" className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-primary mb-12 text-center">
+            Experience
+          </h2>
+          <div className="space-y-8">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl font-semibold text-primary">
+                  Senior Illustrator
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Creative Studios Inc., 2020-Present
+                </p>
+                <p className="text-foreground">
+                  Lead illustrator for major publishing projects and advertising
+                  campaigns, specializing in digital illustration and concept
+                  art.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl font-semibold text-primary">
+                  Freelance Artist
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Self-employed, 2018-2020
+                </p>
+                <p className="text-foreground">
+                  Created custom artwork for various clients, including book
+                  covers, editorial illustrations, and brand identity designs.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="gallery"
+        className="py-20 bg-primary relative overflow-hidden"
+      >
+        <svg
+          className="absolute top-0 left-0 w-full h-32 text-background"
+          preserveAspectRatio="none"
+          viewBox="0 0 1440 320"
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <path
+            fill="currentColor"
+            fillOpacity="1"
+            d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+          ></path>
+        </svg>
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-4xl font-bold text-primary-foreground mb-12 text-center">
+            Gallery
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <Card
+                key={i}
+                className="transform transition-all duration-300 hover:scale-105"
+              >
+                <CardContent className="p-2">
+                  <Image
+                    src={`/placeholder.svg?height=300&width=300`}
+                    alt={`Artwork ${i}`}
+                    width={300}
+                    height={300}
+                    className="w-full h-auto rounded"
+                  />
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 text-center">
+        <h2 className="text-4xl font-bold text-primary mb-8">Get in Touch</h2>
+        <Button size="lg">Contact Me</Button>
+      </section>
     </div>
   );
 }
