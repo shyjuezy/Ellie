@@ -9,10 +9,11 @@ export default function Home() {
         id="hero"
         className="min-h-screen flex items-center justify-center relative overflow-hidden"
       >
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 w-full">
           <svg
             className="w-full h-full"
             viewBox="0 0 1000 1000"
+            preserveAspectRatio="xMidYMid slice"
             xmlns="http://www.w3.org/2000/svg"
           >
             <defs>
@@ -33,11 +34,11 @@ export default function Home() {
             </g>
           </svg>
         </div>
-        <div className="text-center relative z-10">
-          <h1 className="text-6xl font-bold text-primary-foreground mb-4 animate-fade-in-up">
+        <div className="text-center relative z-10 px-4 max-w-full">
+          <h1 className="text-6xl md:text-6xl text-4xl font-bold text-primary-foreground mb-4 animate-fade-in-up break-words">
             Meredith Eliana Hataway
           </h1>
-          <p className="text-3xl text-secondary-foreground animate-fade-in-up animation-delay-300">
+          <p className="text-xl md:text-3xl text-secondary-foreground animate-fade-in-up animation-delay-300">
             Stage Manager & Production Manager
           </p>
         </div>
