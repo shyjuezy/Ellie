@@ -35,10 +35,10 @@ export default function Home() {
         </div>
         <div className="text-center relative z-10">
           <h1 className="text-6xl font-bold text-primary-foreground mb-4 animate-fade-in-up">
-            Jane Doe
+            Meredith Eliana Hataway
           </h1>
           <p className="text-3xl text-secondary-foreground animate-fade-in-up animation-delay-300">
-            Visual Artist & Illustrator
+            Stage Manager & Production Manager
           </p>
         </div>
       </section>
@@ -183,13 +183,15 @@ export default function Home() {
                 className="transform transition-all duration-300 hover:scale-105"
               >
                 <CardContent className="p-2">
-                  <Image
-                    src={`/placeholder.svg?height=300&width=300`}
-                    alt={`Artwork ${i}`}
-                    width={300}
-                    height={300}
-                    className="w-full h-auto rounded"
-                  />
+                  <div className="relative w-full aspect-[4/3]">
+                    <Image
+                      src={`/gallery/artwork_${i}.jpg`}
+                      alt={`Artwork ${i}`}
+                      fill
+                      className="object-cover rounded"
+                      priority={i <= 3}
+                    />
+                  </div>
                 </CardContent>
               </Card>
             ))}

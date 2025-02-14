@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Modern Art Professional Portfolio",
-  description: "Portfolio website for a contemporary art professional",
+  title: "Meredith Hataway",
+  description: "Portfolio website for a stage manager and production manager",
 };
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${poppins.className} min-h-screen`}>
-        <header className="fixed w-full bg-background/90 backdrop-blur-sm z-50 transition-all duration-300 ease-in-out">
+        <header className="fixed w-full bg-background/90 backdrop-blur-xs z-50 transition-all duration-300 ease-in-out">
           <nav className="container mx-auto px-4 py-4">
             <ul className="flex justify-center space-x-8">
               <li>
