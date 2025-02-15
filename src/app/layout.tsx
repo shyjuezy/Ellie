@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={`${poppins.className} min-h-screen`}>
         <header className="fixed w-full bg-background/90 backdrop-blur-xs z-50 transition-all duration-300 ease-in-out">
           <nav className="container mx-auto px-4 py-4">
-            <ul className="flex justify-center space-x-8">
+            <ul className="flex justify-center space-x-2 sm:space-x-4 md:space-x-8">
               <li>
                 <a
                   href="#about"
@@ -57,13 +57,21 @@ export default function RootLayout({
                   Gallery
                 </a>
               </li>
+              <li>
+                <a
+                  href="#contact"
+                  className="text-primary hover:text-primary/80 transition-colors"
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
           </nav>
         </header>
         <main>{children}</main>
         <footer className="bg-primary text-primary-foreground py-8 mt-16">
           <div className="container mx-auto px-4 text-center">
-            <p>&copy; 2025 Art Professional. All rights reserved.</p>
+            <p>&copy; 2025 Meredith Eliana Hataway. All rights reserved.</p>
           </div>
         </footer>
       </body>

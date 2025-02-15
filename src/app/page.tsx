@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { PhoneIcon, MailIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
             Meredith Eliana Hataway
           </h1>
           <p className="text-xl md:text-3xl text-secondary-foreground animate-fade-in-up animation-delay-300">
-            Stage Manager & Production Manager
+            Stage Manager & Technical Director
           </p>
         </div>
       </section>
@@ -48,10 +49,17 @@ export default function Home() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-primary mb-8">About Me</h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            I&apos;m a passionate visual artist with over 10 years of experience
-            in illustration and digital art. My work focuses on blending
-            traditional techniques with modern digital tools to create unique
-            and captivating pieces that push the boundaries of contemporary art.
+            I&apos;m a Stage Manager and Technician, and my hope is to help
+            create a space where people are willing to learn and try new things!
+            I have a Bachelor of Arts in Theatre with a concentration in
+            Production from Jacksonville State University. I am a fast learner,
+            a team player, and a dedicated worker who wants to make and share
+            art with the world.
+            <br />
+            <br />I have a passion for creating and sharing art with the world.
+            I believe that art is a powerful tool for communication and
+            connection, and I am committed to using my skills to make a positive
+            impact on the world.
           </p>
         </div>
       </section>
@@ -75,28 +83,17 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-primary mb-12 text-center">
             Education
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="transform transition-all duration-300 hover:scale-105">
+          <div className="grid gap-8 justify-center items-center">
+            <Card className="transform transition-all duration-300 hover:scale-105 md:w-1/2 mx-auto">
               <CardHeader>
                 <CardTitle className="text-2xl font-semibold text-primary">
-                  Master of Fine Arts
+                  BA in Theatre with a Concentration in Production, Minor in
+                  Criminal Justice
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  University of Arts, 2018-2020
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="transform transition-all duration-300 hover:scale-105">
-              <CardHeader>
-                <CardTitle className="text-2xl font-semibold text-primary">
-                  Bachelor of Visual Arts
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  State College of Design, 2014-2018
+                  Jacksonville State University- Jacksonville, AL, 2019 - 2024
                 </p>
               </CardContent>
             </Card>
@@ -174,7 +171,7 @@ export default function Home() {
           ></path>
         </svg>
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-4xl font-bold text-primary-foreground mb-12 text-center">
+          <h2 className="text-4xl font-bold text-primary-foreground my-8 text-center">
             Gallery
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -200,9 +197,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 text-center">
+      <section id="contact" className="py-20 text-center">
         <h2 className="text-4xl font-bold text-primary mb-8">Get in Touch</h2>
-        <Button size="lg">Contact Me</Button>
+        <div className="flex flex-col gap-4 justify-center items-center">
+          <div className="flex gap-2 items-center">
+            <PhoneIcon className="w-6 h-6" />
+            <Link
+              href="tel:+3342423333"
+              className="text-primary font-medium hover:underline hover:text-primary hover:scale-x-105 transition-all duration-300"
+            >
+              +1 (334) 242-3333
+            </Link>
+          </div>
+          <div className="flex gap-2 items-center">
+            <MailIcon className="w-6 h-6" />
+            <a
+              href="mailto:el.hataway13@gmail.com"
+              className="text-primary font-medium hover:underline hover:text-primary hover:scale-x-105 transition-all duration-300"
+            >
+              el.hataway13@gmail.com
+            </a>
+          </div>
+        </div>
       </section>
     </div>
   );
