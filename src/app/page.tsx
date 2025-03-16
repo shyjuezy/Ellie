@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { PhoneIcon, MailIcon } from "lucide-react";
@@ -151,48 +150,6 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="gallery"
-        className="py-20 bg-primary relative overflow-hidden"
-      >
-        <svg
-          className="absolute top-0 left-0 w-full h-32 text-background"
-          preserveAspectRatio="none"
-          viewBox="0 0 1440 320"
-        >
-          <path
-            fill="currentColor"
-            fillOpacity="1"
-            d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-          ></path>
-        </svg>
-        <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-4xl font-bold text-primary-foreground my-8 text-center">
-            Gallery
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <Card
-                key={i}
-                className="transform transition-all duration-300 hover:scale-105"
-              >
-                <CardContent className="p-2">
-                  <div className="relative w-full aspect-[4/3]">
-                    <Image
-                      src={`/gallery/artwork_${i}.jpg`}
-                      alt={`Artwork ${i}`}
-                      fill
-                      className="object-cover rounded"
-                      priority={i <= 3}
-                    />
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
