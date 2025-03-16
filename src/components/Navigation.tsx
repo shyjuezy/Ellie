@@ -41,10 +41,10 @@ export default function Navigation() {
           flex-col md:flex-row
           absolute md:relative
           left-0 right-0 top-16 md:top-0
-          bg-background/90 md:bg-transparent
+          bg-background/95 md:bg-transparent
           py-4 md:py-0
           space-y-4 md:space-y-0
-          text-center
+          text-center font-semibold tracking-wider md:font-normal md:leading-normal
         `}
       >
         <li>
