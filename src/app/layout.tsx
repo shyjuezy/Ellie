@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import Link from "next/link";
 import type React from "react";
 
 const poppins = Poppins({
@@ -26,44 +27,44 @@ export default function RootLayout({
           <nav className="container mx-auto px-4 py-4">
             <ul className="flex justify-center space-x-2 sm:space-x-4 md:space-x-8">
               <li>
-                <a
-                  href="#about"
+                <Link
+                  href="/#about"
                   className="text-primary hover:text-primary/80 transition-colors"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#education"
+                <Link
+                  href="/#education"
                   className="text-primary hover:text-primary/80 transition-colors"
                 >
                   Education
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#experience"
+                <Link
+                  href="/#experience"
                   className="text-primary hover:text-primary/80 transition-colors"
                 >
                   Experience
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#gallery"
+                <Link
+                  href="/gallery"
                   className="text-primary hover:text-primary/80 transition-colors"
                 >
                   Gallery
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#contact"
+                <Link
+                  href="/#contact"
                   className="text-primary hover:text-primary/80 transition-colors"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
