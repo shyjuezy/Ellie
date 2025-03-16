@@ -63,7 +63,6 @@ const galleryGroups = {
       "/gallery/springawakening/artwork_3.png",
       "/gallery/springawakening/artwork_4.png",
       "/gallery/springawakening/artwork_5.png",
-      "/gallery/springawakening/artwork_6.png",
     ],
   },
   stageManager: {
