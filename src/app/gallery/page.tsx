@@ -80,7 +80,7 @@ const galleryGroups = {
 
 export default function Gallery() {
   return (
-    <div className="container mx-auto px-4 pt-6">
+    <div className="container mx-auto px-4 pt-12">
       <section className="py-20 bg-primary relative overflow-hidden">
         <svg
           className="absolute top-0 left-0 w-full h-32 text-background"
@@ -101,14 +101,14 @@ export default function Gallery() {
         {Object.entries(galleryGroups).map(([key, group]) => (
           <div key={key} className="relative z-10">
             <div className="w-full flex flex-col lg:flex-row justify-between items-start mb-12 px-4">
-              <div className="flex flex-col items-center justify-start w-full lg:w-[320px] mx-4 lg:sticky lg:top-4">
+              <div className="flex flex-col items-center pr-6 justify-start w-full lg:w-[320px] mx-4 lg:sticky lg:top-4">
                 <h3 className="text-4xl font-extralight text-primary-foreground text-center mb-4">
                   {group.title}
                 </h3>
 
                 <Separator className="w-full mb-4" />
 
-                <p className="text-sm text-primary-foreground/80 text-left font-light leading-relaxed mb-8">
+                <p className=" text-primary-foreground/80 text-left font-light leading-relaxed mb-8">
                   {group.description}
                 </p>
               </div>
